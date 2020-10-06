@@ -26,7 +26,7 @@ Page({
     const res= await request({url:'/goods/detail',data:{goods_id}})
     this.arr=res
 
-    let shoucang=wx.getStorageSync('shoucang')
+    let shoucang=wx.getStorageSync('shoucang')||[]
     let yeyeye=shoucang.some(v=>v.goods_id===this.arr.goods_id);
     
     
