@@ -1,0 +1,4 @@
+<!--pages/auth/auth.wxml-->
+<button open-type="getUserInfo" bindgetuserinfo="handlesss" plain type="primary">
+  支付授权
+</button>

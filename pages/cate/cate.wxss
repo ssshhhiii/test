@@ -1,0 +1,103 @@
+/* pages/cate/cate.wxss */
+.address{
+  padding-top: 15rpx;
+}
+button{
+  width: 60%;
+}
+.adddress2{
+  padding: 0 10rpx;
+}
+.one{
+  display: flex;
+  justify-content: space-between;
+}
+.gogogo{
+  font-weight: 700;
+  border-bottom: 2rpx solid red;
+  margin-top: 15rpx;
+  padding-bottom: 30rpx;
+}
+.item{
+  display: flex;
+  border-bottom: 2rpx solid #cccccc;
+  padding-right: 10rpx;
+}
+.left{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid{
+  flex: 2;
+  display: flex;
+}
+.mid image{
+  width: 90%;
+}
+.right{
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.top{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+}
+.price{
+  color: red;
+}
+.num{
+  display: flex;
+}
+.bor{
+  border: 2rpx solid #cccccc;
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.sss{
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.flooer{
+  width: 100%;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top: 1rpx solid #cccccc;
+}
+.quanxuan{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heji{
+  flex: 4;
+  text-align: right;
+  padding-right: 10rpx;
+}
+.heji text{
+  color: red;
+}
+.jiesuan{
+  flex: 2;
+  color: #ffffff;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

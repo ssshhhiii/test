@@ -1,0 +1,65 @@
+<!--pages/user/user.wxml-->
+<view class="user">
+<view class="box" wx:if="{{userInfo.nickName}}">
+<view class="box2">
+<image src="{{userInfo.avatarUrl}}" mode="widthFix"></image> 
+<text>{{userInfo.nickName}}</text>
+</view>
+</view>
+<view class="box3" wx:else> 
+<button open-type="getUserInfo" type="primary" plain bindgetuserinfo="handless">登入</button>
+</view>
+</view>
+<view class="bao">
+<view class="container">
+  <view class="one"> 
+    <navigator>
+      <text>0</text>
+      <view>收藏的店铺</view>
+    </navigator>
+    <navigator url="/pages/collect/collect">
+      <text>{{number}}</text>
+      <view>收藏的商品</view>
+    </navigator>
+    <navigator>
+      <text>0</text>
+      <view>关注的商品</view>
+    </navigator>
+    <navigator>
+      <text>0</text>
+      <view>我的足迹</view>
+    </navigator>
+  </view>
+  <view class="two">
+   <view class="top">我的订单</view>
+   <view class="xia">
+     <navigator url="/pages/order/order?type=1">
+       <view class="iconfont icon-quanbudingdan"></view>
+       <view>全部订单</view>
+     </navigator>
+     <navigator url="/pages/order/order?type=2">
+       <view class="iconfont icon-daifukuan01"></view>
+       <view>待付款</view>
+     </navigator>
+     <navigator url="/pages/order/order?type=3">
+       <view class="iconfont icon-daishouhuo"></view>
+       <view>待收货</view>
+     </navigator>
+     <navigator url="/pages/order/order?type=4">
+       <view class="iconfont icon-tuikuan"></view>
+       <view>退款/退货</view>
+     </navigator>
+   </view>
+  </view>
+  <view class="three">收货地址管理</view>
+  <view class="four">
+  <view class="four1">
+      <view>联系客服</view>
+      <view>400-1234-5678</view>
+  </view>
+  <view class="four1"><navigator>意见反馈</navigator></view>
+  <view class="four1"><navigator>关于我们</navigator></view>
+</view>
+<view class="five">把应用推给其他人</view>
+</view>
+</view>

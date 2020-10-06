@@ -1,0 +1,42 @@
+/* pages/category/category.wxss */
+.category{
+  height: 100%;
+}
+.box3{
+  display: flex;
+  height: calc(100vh - 90rpx);
+}
+.left{
+  flex: 2;
+  text-align: center;
+}
+.left-item{
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+.right{
+  flex:5
+}
+.box4{
+  margin-bottom: 40rpx;
+}
+.title{
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.pic{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 32rpx;
+}
+.pic navigator{
+  width: 33%;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.pic navigator image{
+  width: 90%;
+}
+.sas{
+  border-left: 5rpx solid #eb4450;
+}

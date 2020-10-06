@@ -1,0 +1,21 @@
+/* pages/order/order.wxss */
+.box{
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.one{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+.price{
+  color:red;
+}
+navigator{
+  border-bottom: 3rpx solid #cccccc;
+  padding-top: 20rpx;
+}
+navigator:nth-child(1){
+  border-top: 3rpx solid #cccccc;
+}

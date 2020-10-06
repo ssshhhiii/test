@@ -1,0 +1,8 @@
+/**app.wxss**/
+@import './css/iconfont.wxss';
+page,navigator,view,text,swiper,image,swiper-item {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+image{width: 100%;}

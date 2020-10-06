@@ -1,0 +1,35 @@
+
+<view class="cart">
+<view class="adddress2">
+  <view class="one">
+    <view>收货人：{{address.userName}}</view>
+    <view>{{address.telNumber}}</view>
+  </view>
+  <view class="two">{{address.all}}</view>
+</view>
+<view class="gogogo">购物车</view>
+<view class="box">
+  <view class="item" wx:for="{{newcart}}" wx:key="goods_id">
+   
+    <view class="mid"><image mode="widthFix" src="{{item.goods_small_logo}}"></image></view>
+    <view class="right">
+      <view class="top">{{item.goods_name}}</view>
+      <view class="btn">
+        <view class="price">￥{{item.goods_price}}</view>
+        <view class="num"> ×{{item.num}}  
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+</view>
+<view class="flooer">
+ 
+  <view class="heji">
+    <view>合计：<text>￥{{allprice}}</text></view>
+    <view>包含运费</view>
+  </view>
+  <view class="jiesuan" bindtap="paymoney">支付({{allnum}})</view>
+</view>
+

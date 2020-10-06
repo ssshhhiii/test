@@ -1,0 +1,46 @@
+<view class="datail">
+  <!-- 轮播图 -->
+  <swiper autoplay circular indicator-dots>
+    <swiper-item wx:for="{{goodsDetail.pics}}" wx:key="pics_id" bindtap="handleChange" data-url="{{item.pics_big_url}}">
+      <image src="{{item.pics_mid}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+<!-- 价格 -->
+  <view class="price">￥{{goodsDetail.goods_price}}</view>
+  <!-- 介绍收藏 -->
+  <view class="box">
+    <view class="name">{{goodsDetail.goods_name}}</view>
+    <view class="shoucang" bindtap="hanlechange">
+      <view class="iconfont {{yeyeye?'icon-collection-b':'icon-shoucang'}}"></view>
+      <view>收藏</view>
+    </view>
+  </view>
+  <!-- 富文本 -->
+  <rich-text nodes="{{goodsDetail.goods_introduce}}"></rich-text>
+  <!-- 底部图标 -->
+  
+</view>
+<view class="fooler">
+    <view class="kefu">
+      <view class="iconfont icon-kefu"></view>
+      <view>客服</view>
+      <button open-type="contact"></button>
+    </view>
+    <view class="kefu">
+      <view class="iconfont icon-fenxiang"></view>
+      <view>分享</view>
+      <button open-type="share"></button>
+    </view>
+    <navigator class="kefu" url="/pages/cate/cate" open-type="switchTab">
+      <view class="iconfont icon-gouwuche"></view>
+      <view>购物车</view>
+    </navigator>
+    <view class="joincart" bindtap="handlecartadd">
+     
+      <view>加入购物车</view>
+    </view>
+    <view class="bynow">
+     
+      <view>立即购买</view>
+    </view>
+  </view>

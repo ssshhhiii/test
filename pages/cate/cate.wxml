@@ -1,0 +1,52 @@
+<!--pages/cate/cate.wxml-->
+<view class="cart">
+<view class="address" wx:if="{{!address.userName}}">
+  <button type="primary"  plain bindtap="chooseAddress">获取收货地址 </button>
+</view>
+<view wx:else class="adddress2">
+  <view class="one">
+    <view>收货人：{{address.userName}}</view>
+    <view>{{address.telNumber}}</view>
+  </view>
+  <view class="two">{{address.all}}</view>
+</view>
+<view class="gogogo">购物车</view>
+<block wx:if="{{cart.length===0}}">
+  <image mode="widthFix" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601728193280&di=027248919197ceb654c0b92ed06e1b10&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"></image>
+</block>
+<block wx:else>
+<view class="box">
+  <view class="item" wx:for="{{cart}}" wx:key="goods_id">
+    <view class="left">
+        <checkbox-group bindchange="handlechange" data-id="{{item.goods_id}}">
+          <checkbox checked="{{item.checked}}"></checkbox>
+        </checkbox-group>
+    </view>
+    <view class="mid"><image mode="widthFix" src="{{item.goods_small_logo}}"></image></view>
+    <view class="right">
+      <view class="top">{{item.goods_name}}</view>
+      <view class="btn">
+        <view class="price">￥{{item.goods_price}}</view>
+        <view class="num">
+          <view class="bor" bindtap="handleadd" data-id="{{item.goods_id}}" data-opertion="{{-1}}">-</view>
+          <view class="sss">{{item.num}}</view>
+          <view class="bor" bindtap="handleadd" data-id="{{item.goods_id}}" data-opertion="{{1}}">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+</block>
+</view>
+<view class="flooer">
+  <view class="quanxuan">
+    <checkbox-group bindchange="handlequxnxuan"> 
+      <checkbox checked="{{allchecked}}"></checkbox>
+    </checkbox-group><text>全选</text>
+  </view>
+  <view class="heji">
+    <view>合计：<text>￥{{allprice}}</text></view>
+    <view>包含运费</view>
+  </view>
+  <view class="jiesuan" bindtap="handlrpay">结算({{allnum}})</view>
+</view>

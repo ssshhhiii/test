@@ -1,0 +1,78 @@
+/* pages/goods_detail/goods_detail.wxss */
+page{
+  padding-bottom: 100rpx;
+}
+.datail{
+  margin-top: 10rpx;
+}
+swiper{
+  height: 70vw;
+  text-align: center;
+}
+swiper image{
+  width: 60%;
+}
+.price{
+  color:red;
+  font-weight: 700;
+  padding-left: 15rpx;
+}
+.box{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.name{
+  flex: 4;
+  padding-left: 15rpx;
+  padding-right: 10rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.shoucang{
+  flex: 1;
+  text-align: center;
+  border-left: 3rpx solid #000;
+}
+.fooler{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  border-top: 1rpx solid #cccccc;
+  width: 100%;
+  font-size: 30rpx;
+  height: 90rpx;
+  text-align: center;
+  background-color: #fff;
+}
+.kefu{
+  flex: 1;
+  line-height: 40rpx;
+  padding-top: 10rpx;
+  position: relative;
+}
+.kefu button{
+  position: absolute;
+  width: 100%  !important;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.joincart{
+  flex: 2;
+  background-color: #ffa500;
+  color: #fff;
+  line-height: 90rpx;
+}
+.bynow{
+  flex: 2;
+  background-color: red;
+  color: #fff;
+  line-height: 90rpx;
+}
+.icon-collection-b{
+  color: red;
+}

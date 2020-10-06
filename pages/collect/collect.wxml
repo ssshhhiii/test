@@ -1,0 +1,18 @@
+<!-- pages/collect/collect.wxml -->
+<view class="collect">
+  <tabs tabs="{{tabs}}" bind:sos="handlesos"></tabs>
+  <block wx:if="{{tabs[0].show}}">
+    <view class="box">
+<navigator wx:for="{{shoucang}}" wx:key="goods_id" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+  <view class="left"><image mode="widthFix" src="{{item.goods_small_logo ||  'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1179606861,388095873&fm=26&gp=0.jpg'}}"></image></view>
+  <view class="right">
+    <view class="shang">{{item.goods_name}}</view>
+    <view class="xia">￥{{item.goods_price}}</view>
+  </view>
+</navigator>
+</view>
+  </block>
+  <block wx:elif="{{tabs[1].show}}">2 </block>
+<block wx:else="{{tabs[2].show}}">3 </block>
+
+</view>

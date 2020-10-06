@@ -1,0 +1,32 @@
+/* pages/collect/collect.wxss */
+.collect{
+  margin-bottom: 50rpx;
+}
+.box{
+  margin-top: 15rpx;
+}
+.box  navigator{
+  display: flex;
+  border-bottom: 2rpx solid #999999;
+  padding: 2rpx 0 2rpx 25rpx;
+}
+.left{
+  flex:  1;
+  display: flex;
+}
+.left image{width: 90%;height: 95%;}
+.right{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.shang{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.xia{
+  color: red;
+}

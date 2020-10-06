@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="shouye">
+  <!-- 搜索框 -->
+ <searchInput></searchInput>
+ <!-- 轮播图 (页面跳转还没做) -->
+ <view class="box1">
+   <swiper autoplay indicator-dots circular>
+     <swiper-item wx:for="{{rotationChart}}" wx:key="goods_id" >
+       <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+       <image mode="widthFix" src="{{item.image_src}}"></image>
+      </navigator>
+     </swiper-item>
+   </swiper>
+ </view>
+<!-- 导航 (页面跳转还没做) -->
+<view class="navigation">
+  <navigator wx:for="{{navigation}}" wx:key="name" url="/pages/category/category" open-type="switchTab">
+    <image mode="widthFix" src="{{item.image_src}}"></image>
+  </navigator>
+</view>
+<!-- 楼层 (页面跳转还没做) -->
+<view class="floor">
+  <view class="box2" wx:for="{{floor}}" wx:key="item1" wx:for-item="item1" wx:for-index="index1">
+    <view class="title"><image mode="widthFix" src="{{item1.floor_title.image_src}}"></image></view>
+    <view class="pic">
+      <navigator url="/pages/goods_list/goods_list?id=123" wx:for="{{item1.product_list}}" wx:key="name" wx:for-item="item2" wx:for-index="index2">
+        <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
+      </navigator>
+    </view>
+  </view>
+</view>
+</view>

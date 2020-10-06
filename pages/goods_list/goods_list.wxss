@@ -1,0 +1,26 @@
+/* pages/goods_list/goods_list.wxss */
+.box  navigator{
+  display: flex;
+  padding-left: 25rpx;
+  border-bottom: 2rpx solid #999999;
+}
+.left{
+  flex:  1;
+  display: flex;
+}
+.left image{width: 90%;height: 95%;}
+.right{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.shang{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.xia{
+  color: red;
+}

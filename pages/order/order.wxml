@@ -1,0 +1,53 @@
+<!--pages/order/order.wxml-->
+<view class="order">
+<tabs tabs="{{tabs}}" bind:sos="handlesos"></tabs>
+</view>
+<block wx:if="{{tabs[0].show}}">
+  <view class="box">
+  <navigator>
+    <view class="one">
+      <view>订单编号：</view>
+      <view>HMDC20209180000002111</view>
+    </view>
+    <view class="one">
+      <view>订单价格：</view>
+      <view class="price">￥15008</view>
+    </view>
+    <view class="one">
+      <view>订单日期：</view>
+      <view>2020/8/16 下午14:30</view>
+    </view>
+  </navigator>
+  <navigator>
+    <view class="one">
+      <view>订单编号：</view>
+      <view>HMDC20209180000002111</view>
+    </view>
+    <view class="one">
+      <view>订单价格：</view>
+      <view class="price">￥15008</view>
+    </view>
+    <view class="one">
+      <view>订单日期：</view>
+      <view>2020/8/16 下午14:30</view>
+    </view>
+  </navigator>
+  <navigator>
+    <view class="one">
+      <view>订单编号：</view>
+      <view>HMDC20209180000002111</view>
+    </view>
+    <view class="one">
+      <view>订单价格：</view>
+      <view class="price">￥15008</view>
+    </view>
+    <view class="one">
+      <view>订单日期：</view>
+      <view>2020/8/16 下午14:30</view>
+    </view>
+  </navigator>
+</view>
+</block>
+  <block wx:elif="{{tabs[1].show}}">2 </block>
+  <block wx:elif="{{tabs[2].show}}">3 </block>
+<block wx:else="{{tabs[3].show}}">4 </block>

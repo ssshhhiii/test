@@ -1,0 +1,24 @@
+<!--pages/category/category.wxml-->
+<view class="category">
+  <searchInput></searchInput>
+  <view class="box3">
+ <!-- 左边菜单 -->
+ <scroll-view class="left" scroll-y>
+  <view wx:for="{{categoryLeft}}" wx:key="cat_id" class="left-item {{index===current?'sas':''}}" bindtap="handledian" data-index="{{index}}">
+    {{item}}
+  </view>
+ </scroll-view>
+ <!-- 右边菜单 -->
+<scroll-view class="right" scroll-y scroll-top="{{scrollTop}}">
+  <view wx:for="{{categoryRight}}" wx:key="cat_id" wx:for-item="item1" wx:for-index="index1" class="box4">
+    <view class="title">{{item1.cat_name}}</view>
+    <view class="pic">
+      <navigator wx:for="{{item1.children}}"wx:key="cat_id"  wx:for-item="item2" wx:for-index="index2" url="/pages/goods_list/goods_list?id={{item2.cat_id}}">
+        <image mode="widthFix" src="{{item2.cat_icon}}"></image>
+        <text>{{item2.cat_name}}</text>
+      </navigator>
+    </view>
+  </view>
+</scroll-view>
+  </view>
+</view>
